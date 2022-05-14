@@ -1,0 +1,33 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.navbar-comp {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    width: 100vw;
+    height: 2.5em;
+    border: 1px solid black;
+    padding-top: 1em;
+}
+
+.menu-item {
+    margin-right: 1em;
+}
+
+.icon {
+    width: 70%;
+    height: auto;
+} 
+
+.avatar {
+    width: 0.5em;
+    height: auto;
+}
