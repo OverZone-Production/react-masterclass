@@ -13,30 +13,25 @@ const GoogleLogo = () => {
     )
 }
 
-const TextSearch = () => {
-    const [preview, setPreview] = useState("")
-
-    useEffect(() => {
-
-    }, [preview])
+const TextSearch = (props) => {
+    const {setPreview} = props
 
     return (
         <div id="text-search" className="row">
-            <img className="magnifying" src={magnifying} alt="magnifying" />
-            <input className="searchbox" type="text" 
-            onChange={(e) => setPreview(e.target.value)} />
-            <span>Preview: {preview}</span>
-            <VoiceIcon />
-        </div>
+        <img className="magnifying" src={magnifying} alt="magnifying" />
+        <input className="searchbox" type="text" onChange={(e) => setPreview(e.target.value)} />
+        <VoiceIcon />
+    </div>
     )
 }
 
 const SearchZone = () => {
+    const [preview, setPreview] = useState("")
 
     return (
         <div className="search-zone">
             <GoogleLogo />
-            <TextSearch />
+            <TextSearch setPreview={setPreview}/>
         </div>
     )
 }

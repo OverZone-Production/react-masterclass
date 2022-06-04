@@ -16,7 +16,7 @@ const RenderMenuItems = () => {
     {
       content: <img className="icon" src={appsGrid} alt="icon" />,
     },
-    { content: <img className="avatar" src="#" alt="avatar" /> },
+    {content: "Avatar"},
   ];
 
   return menu.map((m, idx) => <MenuItem key={idx} content={m.content} />);
